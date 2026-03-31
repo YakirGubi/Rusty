@@ -3,7 +3,9 @@ use std::io::{self, Write};
 fn main() {
     println!("Hi we in Rusty take care of you :)");
     print!("Please enter your name: ");
-    io::stdout().flush().expect("Faild to print!");
+    io::stdout()
+        .flush()
+        .expect("Hardcoded buffer using print! it shuld flush!");
 
     let mut user_name = String::new();
     io::stdin()
